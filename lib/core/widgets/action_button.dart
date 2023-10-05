@@ -19,7 +19,7 @@ final BorderRadius? borderRadius;
             )
           ),
         child: Text(
-          text,style: Styles.textStyle18.copyWith(color: textColor,fontFamily: 'Gilroy-Bold',fontSize: 18),
+          text,style: Styles.textStyle18.copyWith(color: textColor,fontFamily: 'Gilroy-Bold',fontSize: 20,fontWeight: FontWeight.bold),
         ),
         onPressed: (){},
       ),

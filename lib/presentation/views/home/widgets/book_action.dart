@@ -6,12 +6,13 @@ class ActionB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+    return   const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: [
           Expanded(child: ActionButton(
             text: '19.99€',
+            
             backgroundColor: Colors.white,
             textColor: Colors.black,
             borderRadius: BorderRadius.only(topLeft: Radius.circular(12),bottomLeft: Radius.circular(16)),
