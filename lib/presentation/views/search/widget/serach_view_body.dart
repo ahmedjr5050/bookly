@@ -13,27 +13,30 @@ class SearchViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-        CustumSearchTextField(),
-        const SizedBox(height: 16,),
-         Text(
-                  'Search Result',
-                  style: Styles.textStyle18,
-                ),
-        const SizedBox(height: 16,),
-      Expanded(child: SearchResultListView()),
-          
+          CustumSearchTextField(),
+          const SizedBox(
+            height: 16,
+          ),
+          Text(
+            'Search Result',
+            style: Styles.textStyle18,
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Expanded(child: SearchResultListView()),
         ],
-    
       ),
     );
   }
 }
+
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  ListView.builder(
+    return ListView.builder(
       shrinkWrap: false,
       // physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,

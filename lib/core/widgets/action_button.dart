@@ -2,26 +2,34 @@ import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class ActionButton extends StatelessWidget {
-  const ActionButton({super.key, required this.backgroundColor, required this.textColor,  this.borderRadius, required this.text});
+  const ActionButton(
+      {super.key,
+      required this.backgroundColor,
+      required this.textColor,
+      this.borderRadius,
+      required this.text});
   final String text;
-final Color backgroundColor;
-final Color textColor;
-final BorderRadius? borderRadius;
+  final Color backgroundColor;
+  final Color textColor;
+  final BorderRadius? borderRadius;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 48,
       child: TextButton(
-          style: TextButton.styleFrom(
+        style: TextButton.styleFrom(
             backgroundColor: backgroundColor,
             shape: RoundedRectangleBorder(
-              borderRadius: borderRadius?? BorderRadius.circular(16)
-            )
-          ),
+                borderRadius: borderRadius ?? BorderRadius.circular(16))),
         child: Text(
-          text,style: Styles.textStyle18.copyWith(color: textColor,fontFamily: 'Gilroy-Bold',fontSize: 20,fontWeight: FontWeight.bold),
+          text,
+          style: Styles.textStyle18.copyWith(
+              color: textColor,
+              fontFamily: 'Gilroy-Bold',
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
         ),
-        onPressed: (){},
+        onPressed: () {},
       ),
     );
   }
